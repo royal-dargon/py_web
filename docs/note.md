@@ -43,3 +43,46 @@ def overlap_line_scatter():
 overlap_line_scatter().render()
 ```
 
+##### 折线图
+
+```python
+def line_xaxis_type():
+    c = Line()
+    c.add_xaxis(Faker.values())
+    c.add_yaxis("商家A", Faker.values())
+    c.add_yaxis("商家B", Faker.values())
+    c.set_global_opts(title_opts=opts.TitleOpts(title="折线图"), xaxis_opts=opts.AxisOpts(type_="value"))
+    return c
+
+
+line_xaxis_type().render()
+```
+
+##### 热力图
+
+```python
+def heatmap_base():
+    value = [[i, j, random.randint(0, 50)] for i in range(24) for j in range(7)]
+    c = HeatMap()
+    c.add_xaxis(Faker.clock)
+    c.add_yaxis("serise0", Faker.week, value)
+    c.set_global_opts(visualmap_opts=opts.VisualMapOpts())
+    return c
+
+
+heatmap_base().render()
+```
+
+##### 饼图
+
+```python
+# 下面开始折线图
+def line_xaxis_type():
+    c = Line()
+    c.add_xaxis(Faker.values())
+    c.add_yaxis("商家A", Faker.values())
+    c.add_yaxis("商家B", Faker.values())
+    c.set_global_opts(title_opts=opts.TitleOpts(title="折线图"), xaxis_opts=opts.AxisOpts(type_="value"))
+    return c
+```
+
