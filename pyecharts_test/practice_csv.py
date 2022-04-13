@@ -1,6 +1,6 @@
 # 这是一个对csv形式进行解析的demo
 import pandas as pd
-from pyecharts.charts import Bar
+from pyecharts.charts import Bar, Page
 
 
 def csv_data_show(csv_file, x_head_key):
@@ -20,6 +20,10 @@ def csv_data_show(csv_file, x_head_key):
     count_list = res['cnt']
     count = count_list[2:]
     bars_show(tag_name, count)
+
+
+def csv_local_show():
+    df = pd.read_csv()
 
 
 def bars_show(x, y):
